@@ -1,0 +1,143 @@
+:root{
+    --primary-color: #0A697E;
+    --secondary-color: #41A7C0;
+    --accent-color: #F9A03F;
+    --light-bg-color: #FDD5A0;
+
+    --dark-text-color: #2b3e52;
+    --body-text-color: #32485e;
+    --border-color: #F9A03F;
+
+    --heading-font: slab-serif;
+    --body-font: sans-serif;
+}
+
+body{
+    font-family: var(--body-font);
+    color: var(--body-text-color);
+    line-height: 1.7;
+    padding-top: 65px; 
+    background-color: #fff;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--heading-font);
+    color: var(--dark-text-color);
+    font-weight: 750;
+}
+
+.section-title{
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.25rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section-title::after{
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin: 0.5rem auto 0;
+}
+
+/*Navigation*/
+.navbar{
+    background-color: #FFFFFF;
+    border-bottom: 2px solid var(--border-color);
+}
+.navbar-brand{
+    font-family: var(--heading-font);
+    color: var(--primary-color) !important;
+}
+.nav-link{
+    font-family: var(--body-font);
+    font-weight: 500;
+    padding: 0.8rem 1rem !important;
+    color: var(--body-text-color) !important;
+}
+.nav-link:hover{
+    color: var(--accent-color) !important;
+}
+
+@media (max-width: 992px){
+    .navbar-collapse{
+        display: block !important;
+    }
+    .nav-item{
+        width: 100%; 
+        text-align: left; 
+    }
+    .nav-link{
+        padding: 0.5rem 1rem !important;
+        border-bottom: 1px solid var(--border-color);
+    }
+}
+
+/*Hero Section*/
+.hero-section{
+    background-color: var(--light-bg-color);
+    color: var(--dark-text-color);
+    padding: 6rem 0;
+    min-height: 70vh;
+}
+.hero-section .display-4{
+    font-weight: 700;
+    color: var(--primary-color);
+}
+.hero-section .lead{
+    font-size: 1.25rem;
+    color: var(--body-text-color);
+}
+
+/*How I Work Section*/
+.list-group-item.list-group-item-action{
+    color: var(--primary-color);
+}
+.list-group-item.list-group-item-action:hover{
+    background-color: #FFFFFF;
+    color: var(--accent-color);
+}
+
+/*Case Studies Section*/
+.case-study-card{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--border-color);
+}
+.case-study-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(0,0,0,0.15) !important;
+}
+.case-study-card .card-img-top{
+    height: 200px;
+    object-fit: cover;
+    background-color: #FFFFFF;
+}
+.case-study-card .card-body{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+}
+.case-study-card .card-title{
+    color: var(--primary-color);
+}
+.custom-btn{
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.1s ease-in-out, border-color 0.1s ease-in-out;
+}
+.custom-btn:hover{
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+}
+
+/*Utility*/
+hr{
+    border-top: 2px solid var(--border-color);
+}
