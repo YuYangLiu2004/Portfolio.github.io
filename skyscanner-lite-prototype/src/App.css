@@ -1,0 +1,189 @@
+/* src/App.css - Add these to your existing or new App.css */
+/* Make sure :root variables are defined here or in index.css if not from assignment1.css */
+:root {
+    --primary-color: #0A697E;
+    --secondary-color: #41A7C0;
+    --accent-color: #F9A03F;
+    --light-bg-color: #FDD5A0;
+    --dark-text-color: #2b3e52;
+    --body-text-color: #32485e;
+    --border-color: #F9A03F;
+    --heading-font: 'Times New Roman', Times, serif; /* Example */
+    --body-font: Arial, Helvetica, sans-serif;   /* Example */
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--body-text-color);
+  background-color: #f8f9fa; /* Light overall background for areas outside sections */
+  line-height: 1.6;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content-area {
+  flex-grow: 1; /* Ensures footer is pushed down */
+}
+
+
+.app-header {
+  /* background-color: #fff; Using Bootstrap's bg-light on navbar instead */
+  /* padding: 0.75rem 1rem; Bootstrap navbar handles padding */
+  border-bottom: 1px solid #dee2e6;
+  /* margin-bottom: 2rem; Spacing handled by screen-section padding */
+}
+.app-header .navbar-brand {
+  font-family: var(--heading-font);
+  color: var(--primary-color) !important; /* Ensure override if needed */
+  font-weight: bold;
+}
+.app-header .navbar-brand i {
+  margin-right: 0.5rem;
+}
+
+.screen-section {
+  /* padding-top: 2rem; // py-5 from Bootstrap handles this
+  padding-bottom: 3rem; */
+  min-height: 70vh;
+}
+
+.section-title-app {
+  font-family: var(--heading-font);
+  color: var(--dark-text-color);
+  font-weight: 700;
+}
+/* Remove duplicate h2,h3 styling if already covered by Bootstrap or specific component styles */
+
+
+/* Search Form Specifics */
+.search-form-container .form-label {
+  font-weight: 500;
+  color: var(--dark-text-color);
+  font-size: 0.9rem; /* Smaller labels */
+}
+.btn-search.custom-btn { /* More specific selector if needed */
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: white !important;
+  font-weight: 500;
+  padding: 0.6rem 1.5rem;
+}
+.btn-search.custom-btn:hover {
+  background-color: #e08e30 !important; /* Darker accent */
+  border-color: #e08e30 !important;
+}
+
+/* Results Page Specifics */
+.filters-bar {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-radius: 8px; 
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.flight-card {
+  background-color: #ffffff;
+  border-left: 5px solid var(--primary-color);
+}
+
+.flight-card .flight-times { font-weight: 500; font-size: 1.1rem; }
+.flight-card .flight-details-summary { font-size: 0.9rem; color: var(--body-text-color); }
+.flight-card .flight-price h4 { font-size: 1.5rem; font-weight: bold; color: var(--primary-color); }
+
+.btn-book-now.custom-btn {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: white !important;
+}
+.btn-book-now.custom-btn:hover {
+  background-color: #e08e30 !important;
+  border-color: #e08e30 !important;
+}
+.btn-view-details.btn-outline-primary { /* Bootstrap class for outline */
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.btn-view-details.btn-outline-primary:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+.tag { font-size: 0.75rem; font-weight: bold; padding: 0.2rem 0.5rem; border-radius: 4px; display: inline-block; }
+.tag-cheapest { background-color: var(--accent-color); color: white; }
+.tag-quickest { background-color: var(--secondary-color); color: white; }
+
+.flight-details-collapsible {
+  /* border-top: 1px dashed #eee; */ /* Bootstrap card might handle separator if within card-body */
+  font-size: 0.85rem;
+}
+.flight-details-collapsible h6 {
+  font-family: var(--heading-font);
+  color: var(--dark-text-color);
+  font-size: 0.95rem;
+  margin-bottom: 0.3rem;
+  margin-top: 0.8rem;
+}
+.flight-details-collapsible ul { list-style: none; padding-left: 0; }
+.flight-details-collapsible ul li { margin-bottom: 0.2rem; }
+
+
+/* Checkout Page Specifics */
+.checkout-summary .price-item { display: flex; justify-content: space-between; margin-bottom: 0.5rem; }
+.checkout-summary .price-item.price-total { font-weight: bold; font-size: 1.2rem; margin-top: 0.75rem; }
+.checkout-summary .price-item.price-total span:last-child { color: var(--primary-color); }
+.secure-payment-icons i {
+  margin: 0 0.25rem;
+  color: #6c757d; /* Bootstrap secondary text color */
+}
+.btn-confirm-pay.custom-btn {
+  background-color: var(--accent-color) !important;
+  border-color: var(--accent-color) !important;
+  color: white !important;
+  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
+}
+.btn-confirm-pay.custom-btn:hover {
+  background-color: #e08e30 !important;
+  border-color: #e08e30 !important;
+}
+
+/* Confirmation Page Styles */
+.confirmation-message .fa-check-circle { /* More specific for icon */
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: #198754; /* Bootstrap success color */
+}
+
+.app-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background-color: var(--dark-text-color);
+  color: #adb5bd;
+  font-size: 0.9rem;
+  /* margin-top: 3rem; // flex-grow on main content handles pushing it down */
+}
+.app-footer a { color: var(--accent-color); text-decoration: none; }
+.app-footer a:hover { text-decoration: underline; }
+
+/* Ensure custom-btn styles from assignment1.css are effective or re-declare them here with !important if needed for overrides */
+.custom-btn {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: #FFFFFF;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 0.25rem; /* or your theme's radius */
+}
+.custom-btn:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: #FFFFFF;
+}
